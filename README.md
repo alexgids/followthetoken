@@ -55,7 +55,9 @@ The app is static, so any static host works. Build the public copy with Python 3
 python scripts/build_site.py --url https://followthetoken.com/
 ```
 
-`dist/` contains only runtime files, absolute canonical and social-preview URLs, `robots.txt`, `sitemap.xml`, `404.html`, and `_headers` security headers (used by Cloudflare Pages and Netlify). Upload `dist/` with Cloudflare Pages Direct Upload, or publish it with GitHub Pages. Rebuild whenever the URL changes. To test a served build, run the suite with `ATLAS_URL` set to the local site URL and `ATLAS_HEADERS` set to `dist/_headers`.
+`dist/` contains only runtime files, absolute canonical and social-preview URLs, `robots.txt`, `sitemap.xml`, `404.html`, and `_headers` security headers. Rebuild whenever the URL changes. To test a served build, run the suite with `ATLAS_URL` set to the local site URL and `ATLAS_HEADERS` set to `dist/_headers`.
+
+The live site deploys with Cloudflare Workers Builds on every push to `main`: build command `python3 scripts/build_site.py --url https://followthetoken.com/`, deploy command `npx wrangler deploy`. [wrangler.jsonc](wrangler.jsonc) publishes only `dist/` as static assets and serves `404.html` for unknown paths.
 
 ## Optional Regression Tests
 
