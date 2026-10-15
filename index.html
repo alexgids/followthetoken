@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive visual guide to how AI and large language models work: tokens, embeddings, attention, transformers, training, inference, KV cache, RAG, agents, and MCP. Runs entirely in your browser.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#087f7e">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Follow the Token">
+  <meta property="og:title" content="Follow the Token: How Does AI Actually Work?">
+  <meta property="og:description" content="36 connected visualizations of neural networks, transformers, attention, training, inference, RAG, agents, and production AI. Runs entirely in your browser.">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Follow the Token: trace one question from language to tokens, attention, probabilities, and the next token.">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Follow the Token: How AI Actually Works</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/katex.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="vendor/d3.min.js"></script>
+  <script defer src="vendor/lucide.min.js"></script>
+  <script defer src="vendor/katex.min.js"></script>
+  <script defer src="vendor/cl100k_base.js"></script>
+  <script defer src="vendor/reinforce.js"></script>
+  <script defer src="js/core.js"></script>
+  <script defer src="js/concepts.js"></script>
+  <script defer src="js/diagrams.js"></script>
+  <script defer src="js/simulations-foundations.js"></script>
+  <script defer src="js/simulations-transformers.js"></script>
+  <script defer src="js/simulations-learning.js"></script>
+  <script defer src="js/simulations-systems.js"></script>
+  <script defer src="js/simulations-applications.js"></script>
+  <script defer src="js/simulations-production.js"></script>
+  <script defer src="js/simulations-map.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <a class="brand" href="#home"><span class="brand-symbol" aria-hidden="true"><i data-lucide="waypoints"></i></span><span>Follow the Token<span class="brand-sub">HOW AI ACTUALLY WORKS</span></span></a>
+    <label class="sidebar-search"><i data-lucide="search" aria-hidden="true"></i><input id="nav-search" type="search" placeholder="Find a concept" aria-label="Find a concept"></label>
+    <nav id="navigation"></nav>
+    <div class="sidebar-bottom"><a href="#learning">Learning path</a><a href="#glossary">Glossary</a><div class="progress-summary"><span>Your understanding</span><strong id="progress-label">0 / 36</strong><div class="progress-track"><span id="progress-fill"></span></div></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" title="Open navigation"><i data-lucide="panel-left"></i></button><nav id="breadcrumbs" aria-label="Breadcrumb"></nav><div class="topbar-actions"><a href="#comparison" class="comparison-link"><i data-lucide="split"></i><span>Training / inference</span></a><span class="local-status"><span></span> LOCAL PLAYGROUND</span><button class="icon-button" id="theme-toggle" aria-label="Switch color theme" title="Switch color theme"><i data-lucide="sun-moon"></i></button></div></header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="workspace-footer"><span>FOLLOWTHETOKEN.COM <span class="footer-divider">/</span> LANGUAGE TO SYSTEMS</span><span>Conceptual simulations. No model API calls.</span></footer>
+  </div>
+</body>
+</html>
